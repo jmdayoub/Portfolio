@@ -1,10 +1,10 @@
 export const projects = [
   {
     title: "Chat Application",
-    subtitle: "SignalR | C# | .Net Core | React.js | and SQL",
+    subtitle: "SignalR | C# | .Net Core | React.js | SQL",
     description:
       "Fully-functioning chat application built and deployed for client Mi-Vet, SaaS responsive application designed to streamline equine veterinary care",
-    image: "./chat1.png",
+    image: "./MiVet-Chat.gif",
     link: "https://www.github.com/jmdayoub/ChatApplication",
   },
   {
@@ -33,30 +33,19 @@ export const projects = [
   },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
-    name: "Jesse Hicks",
-    company: "Zoozle",
-  },
-  {
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
-    image: "https://randomuser.me/api/portraits/men/94.jpg",
-    name: "Ruben Alvarez",
-    company: "Dooble.io",
-  },
-];
-
 export const skills = [
   "JavaScript",
   "React.js",
-  "C# / .Net",
+  "C#",
+  ".Net Core",
   "SQL",
   "Bootstrap",
   "HTML5",
   "CSS3",
   "Git",
+  "Postman",
+  "Trello",
+  "Visual Studio",
+  "MS SQL Server",
+  "Chrome DevTools",
 ];
