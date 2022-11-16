@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import toastr from "toastr";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -22,14 +23,14 @@ const Contact = () => {
         form.current,
         "r3FQpxORjuUlF4HOY"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .then((result) => {
+        console.log(result.text);
+        toastr["success"]("Email sent", "Success!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -73,7 +74,6 @@ const Contact = () => {
         </div>
         <form
           ref={form}
-          netlify
           name="contact"
           onSubmit={sendEmail}
           className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
@@ -92,9 +92,10 @@ const Contact = () => {
             <input
               type="text"
               id="name"
-              name="user_name"
+              name="name"
               required
               onChange={(e) => setName(e.target.value)}
+              value={name}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -105,9 +106,10 @@ const Contact = () => {
             <input
               type="email"
               id="email"
-              name="user_email"
+              name="email"
               required
               onChange={(e) => setEmail(e.target.value)}
+              value={email}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -123,6 +125,7 @@ const Contact = () => {
               name="message"
               required
               onChange={(e) => setMessage(e.target.value)}
+              value={message}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             />
           </div>
