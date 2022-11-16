@@ -1,4 +1,5 @@
 import React from "react";
+import Typed from "react-typed";
 
 const About = () => {
   return (
@@ -7,14 +8,21 @@ const About = () => {
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hi, I'm Jared.
-            <br className="hidden lg:inline-block" />I build web applications!
+            <br className="hidden lg:inline-block" />
+            {/* I build web applications! */}
+            <Typed
+              strings={["I build web applications."]}
+              typeSpeed={80}
+              backSpeed={50}
+              loop
+            />
           </h1>
           <p className="mb-8 leading-relaxed">
             I am a passionate full stack software developer based in Los
-            Angeles, CA skilled in solving real-world problems using software
-            development. I am currently working with React.js, C#/.Net, and SQL,
-            but I am always eager to learn other tools and languages to further
-            develop my skillset.
+            Angeles, CA skilled in solving real-world problems using technology.
+            I am currently working with React.js, C#/.Net, and SQL, but I am
+            always eager to learn other tools and languages to further develop
+            my skillset and contribute to the team in the best way possible.
           </p>
           <div className="flex justify-center">
             <a
