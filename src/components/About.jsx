@@ -11,7 +11,7 @@ const About = () => {
             <br className="hidden lg:inline-block" />
             <Typed
               strings={["I build web applications."]}
-              typeSpeed={80}
+              typeSpeed={70}
               backSpeed={50}
               loop
             />
